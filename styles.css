@@ -1,1 +1,215 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #0E1323;
+}
+
+/* TYPOGRAPHY */
+h1, h2 {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  color: #BBC0FF;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+button {
+  color: #7078C9;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.main-container {
+  margin: 8.1rem 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  background-color: #1C204B;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.container .container:first-child {
+  margin-top: 0;
+}
+
+.container .container:last-child {
+  margin-bottom: 0;
+}
+
+.container.main {
+  height: 20.3rem;
+}
+
+.container.main .report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5747EA;
+  border-radius: 15px;
+  height: 13.3rem;
+}
+
+.container.main .report .boss-image {
+  width: calc( (96 / 329) * 100%);
+  text-align: right;
+}
+
+.container.main .report .boss-image img {
+  height: 6.4rem;
+  border: 3px solid white;
+  border-radius: 90px;
+}
+
+.container.main .report .boss-text {
+  width: calc( (233 / 329) * 100%);
+  padding-left: 2rem;
+}
+
+.container.main .report .boss-text .report-paragraph {
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  height: 16rem;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7rem;
+}
+
+.subcontainer-work {
+  background-color: #FF8B64;
+  background-image: url(/images/icon-work.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer-play {
+  background-color: #55C2E6;
+  background-image: url(/images/icon-play.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer-study {
+  background-color: #FF5E7D;
+  background-image: url(/images/icon-study.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer-exercise {
+  background-color: #4BCF82;
+  background-image: url(/images/icon-exercise.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer-social {
+  background-color: #7335D2;
+  background-image: url(/images/icon-social.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer-self-care {
+  background-color: #F1C75B;
+  background-image: url(/images/icon-self-care.svg);
+  height: 5.2rem;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 92%;
+  background-position-y: 40%;
+}
+
+.subcontainer {
+  margin-top: -1rem;
+  height: 12.2rem;
+  background-color: #1C204B;
+  text-align: bottom;
+  border-radius: 15px;
+}
+/*# sourceMappingURL=styles.css.map */
