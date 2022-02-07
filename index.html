@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">  
   <title>Time tracking dashboard</title>
 </head>
@@ -28,95 +31,167 @@
       </div>
     </div>
 
-    <div class="container work">
-      <div class="subcontainer-work"></div>
-      <div class="subcontainer">
-        <h3>Work</h3>
-        <h1>5hrs</h1> 
-        <p>Last Day - 7hrs</p> 
-        <!-- <h1>32hrs</h1>
-        <p>Previous - 36hrs</p>
-        <h1>103hrs</h1>
-        <p>Previous - 128hrs</p> -->
-      </div>
-    </div>
+    <!-- <div class="container-activities"> -->
+      <div class="container work">
+        <div class="subcontainer-work"></div>
 
-    <div class="container play">
-      <div class="subcontainer-play"></div>
-      <div class="subcontainer">  
-        <h3>Play</h3>
-        <h1>1hr</h1> 
-        <p>Last Day - 2hrs</p> 
-        <!-- <h1>10hrs</h1>
-        <p>Previous - 8hrs</p>
-        <h1>23hrs</h1> 
-        <p>Previous - 29hrs</p> -->
-      </div>
-    </div>
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Work</h3>
+            <h1>5hrs</h1>   
+          </div>
+          <div class="previous-period">
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 7hrs</p>
+          </div>
+        </div>
 
-    <div class="container study">
-      <div class="subcontainer-study"></div>
-      <div class="subcontainer">
-        <h3>Study</h3>
-        <h1>0hrs</h1> 
-        <p>Last Day - 1hr</p> 
-        <!-- <h1>4hrs</h1>
-        <p>Previous - 7hrs</p>
-        <h1>13hrs</h1> 
-        <p>Previous - 19hrs</p> -->  
-      </div>
-    </div>
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Work</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>5hrs</h1>
+            <p>Last Day - 7hrs</p>
+          </div>
+        </div>
 
-    <div class="container exercise">
-      <div class="subcontainer-exercise"></div>
-      <div class="subcontainer">
-        <h3>Exercise</h3>
-        <h1>1hr</h1> 
-        <p>Last Day - 1hr</p> 
-        <!-- <h1>4hrs</h1>
-        <p>Previous - 5hrs</p>
-        <h1>11hrs</h1> 
-        <p>Previous - 18hrs</p> -->  
       </div>
-    </div>
+  
+      <div class="container play">
+        <div class="subcontainer-play"></div>
 
-    <div class="container social">
-      <div class="subcontainer-social"></div>
-      <div class="subcontainer">
-        <h3>Social</h3>
-        <h1>1hr</h1> 
-        <p>Last Day - 3hrs</p> 
-        <!-- <h1>5hrs</h1>
-        <p>Previous - 10hrs</p>
-        <h1>21hrs</h1> 
-        <p>Previous - 23hrs</p> -->  
-      </div>
-    </div>
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Play</h3>
+            <h1>1hr</h1>   
+          </div>
+          <div class="previous-period">
+            <img src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 2hrs</p> 
+          </div>
+        </div>
 
-    <div class="container self-care">
-      <div class="subcontainer-self-care"></div>
-      <div class="subcontainer">
-        <h3>Self Care</h3>
-        <h1>0hrs</h1> 
-        <p>Last Day - 1hr</p> 
-        <!-- <h1>2hrs</h1>
-        <p>Previous - 2hrs</p>
-        <h1>7hrs</h1> 
-        <p>Previous - 11hrs</p>     -->  
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Play</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>1hr</h1>
+            <p>Last Day - 2hrs</p>
+          </div>
+        </div>
       </div>
-    </div>
-    
+  
+      <div class="container study">
+        <div class="subcontainer-study"></div>
+
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Study</h3>
+            <h1>0hrs</h1>   
+          </div>
+          <div class="previous-period">
+            <img src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 1hr</p> 
+          </div>
+        </div>
+
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Study</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>0hrs</h1>
+            <p>Last Day - 1hr</p>
+          </div>
+        </div>
+
+      </div>
+  
+      <div class="container exercise">
+        <div class="subcontainer-exercise"></div>
+
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Exercise</h3>
+            <h1>1hr</h1>   
+          </div>
+          <div class="previous-period">
+            <img src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 1hr</p> 
+          </div>
+        </div>
+
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Exercise</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>1hr</h1>
+            <p>Last Day - 1hr</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container social">
+        <div class="subcontainer-social"></div>
+
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Social</h3>
+            <h1>1hr</h1>   
+          </div>
+          <div class="previous-period">
+            <img src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 3hrs</p> 
+          </div>
+        </div>
+
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Social</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>1hr</h1>
+            <p>Last Day - 3hrs</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container self-care">
+        <div class="subcontainer-self-care"></div>
+
+        <div class="subcontainer hide-for-desktop">
+          <div class="current-period">
+            <h3>Self Care</h3>
+            <h1>0hrs</h1>   
+          </div>
+          <div class="previous-period">
+            <img src="/images/icon-ellipsis.svg" alt="">
+            <p>Last Day - 1hr</p>
+          </div>
+        </div>
+
+        <div class="subcontainer hide-for-mobile">
+          <div class="current-period">
+            <h3>Self Care</h3>
+            <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="previous-period">
+            <h1>0hrs</h1>
+            <p>Last Day - 1hr</p>
+          </div>
+        </div>
+
+      </div>
+
   </main>
-
-
-
-
-
-
-
-
-
-
 
   <script href="app.js"></script>
 </body>

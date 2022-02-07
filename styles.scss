@@ -35,7 +35,11 @@ html {
 // :root {
 // }
 
-h1, h2 {
+h1, h2, h3, p, button {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
     color: $white;
     font-weight: 300;
     letter-spacing: 0.05rem;
@@ -43,10 +47,16 @@ h1, h2 {
 
 h1 {
     font-size: 3.2rem;
+    font-weight: 200;
 }
 
 h2 {
     font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 p {
@@ -61,29 +71,16 @@ button {
     border: none;
     font-size: 1.8rem;
     letter-spacing: 0.05rem;
+    cursor: pointer;
 }
 
 
 .main-container {
     margin: 8.1rem 2.4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    background-color: #1C204B;
-    width: 100%;
-    border-radius: 15px;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    .container:first-child {
-        margin-top: 0;
-    }
-    .container:last-child {
-        margin-bottom: 0;
-    }
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .container.main {
@@ -113,15 +110,58 @@ button {
     }
 }
 
+// .container-activities {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+// }
+
 .container {
     height: 16rem;
+    background-color: #1C204B;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    .container:first-child {
+        margin-top: 0;
+    }
+    .container:last-child {
+        margin-bottom: 0;
+    }
 }
 
-.buttons {
+.subcontainer {
+    margin-top: -1rem;
+    height: 12.2rem;
+    background-color: #1C204B;
+    text-align: bottom;
+    border-radius: 15px;
+    padding: 3.2rem 2.4rem 2rem 2.4rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 7rem;
+    justify-content: space-between;
+    .current-period {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .previous-period {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        .triple-dot {
+            position: relative;
+            width: 2.1rem;
+            height: 0.5rem;
+            text-align: right;
+            float: right;
+            cursor: pointer;
+        }
+    }
 }
 
 .subcontainer-work {
@@ -160,10 +200,160 @@ button {
     @include subcontainer-activity;
 }
 
-.subcontainer {
-    margin-top: -1rem;
-    height: 12.2rem;
-    background-color: #1C204B;
-    text-align: bottom;
-    border-radius: 15px;
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+}
+
+.hide-for-mobile {
+    display: none;
+}
+
+
+
+
+
+
+@media (min-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        .main-container {
+            top: 50%;
+            left: 50%;
+            max-width: 111rem;
+            max-height: 51.8rem;
+            margin: 0;
+            
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            gap: 2rem;
+            grid-template-columns: repeat(4, 3fr);
+            grid-template-rows: repeat(2, 3fr);
+            grid-template-areas: 
+            "report work play study"
+            "report exercise social self-care";
+            .container {
+                max-width: 25.5rem;
+                height: 24.9rem;
+                margin: 0;
+                .subcontainer-work {
+                    grid-area: work;
+                }
+                
+                .subcontainer-play {
+                    grid-area: play;    
+                }
+                
+                .subcontainer-study {
+                    grid-area: study;
+                }
+                
+                .subcontainer-exercise {
+                    grid-area: exercise;
+                }
+                
+                .subcontainer-social {
+                    grid-area: social;
+    
+                }
+                
+                .subcontainer-self-care {
+                    grid-area: self-care;
+                }
+            }
+            .container.main {
+                grid-area: report;
+                height: 51.8rem;
+                .report {
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    height: 35.4rem;
+                    padding: 3.2rem;
+                    .boss-image {
+                        img {
+                            height: 7.8rem;
+                            margin-bottom: 3rem;
+                        }            
+                    }
+                    .boss-text {
+                        padding: 0rem;
+                        .report-paragraph {
+                            font-weight: lighter;
+                        }
+                    }
+                }
+                .buttons {
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    padding: 3rem 3.2rem;
+                    height: 16.4rem;
+                }
+            }
+            .subcontainer {
+                flex-direction: column;
+                height: 19.9rem;
+                align-items: stretch;
+                .current-period {
+                    flex-direction: row;
+                    .triple-dot {
+                        width: 2.1rem;
+                        height: 0.5rem;            
+                    }
+                }
+                .previous-period {
+                    align-items: start;
+                    h1 {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // .current-period {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between;
+    // }
+    // .previous-period {
+    //     position: relative;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-around;
+    //     align-items: end;
+    //     .triple-dot {
+    //         position: relative;
+    //         width: 2.1rem;
+    //         height: 0.5rem;
+    //         text-align: right;
+    //         float: right;
+    //         cursor: pointer;
+    //     }
+    // }
+
+
+    h1 {
+        font-size: 5.6rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 100;
+    }
+    
+    .hide-for-mobile {
+        display: flex;
+    }
+
+    .hide-for-desktop {
+        display: none;
+    }
 }
