@@ -388,6 +388,7 @@ button {
   body .main-container .subcontainer .current-period .triple-dot {
     width: 2.1rem;
     height: 0.5rem;
+    cursor: pointer;
   }
   body .main-container .subcontainer .previous-period {
     -webkit-box-align: start;

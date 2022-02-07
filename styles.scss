@@ -305,7 +305,8 @@ button {
                     flex-direction: row;
                     .triple-dot {
                         width: 2.1rem;
-                        height: 0.5rem;            
+                        height: 0.5rem;
+                        cursor: pointer;          
                     }
                 }
                 .previous-period {
