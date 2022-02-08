@@ -57,11 +57,11 @@ button {
   margin: 8.1rem 2.4rem;
 }
 
-.container.main {
+.big-container.main {
   height: 20.3rem;
 }
 
-.container.main .report {
+.big-container.main .report {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,23 +73,23 @@ button {
   height: 13.3rem;
 }
 
-.container.main .report .boss-image {
+.big-container.main .report .boss-image {
   width: calc( (96 / 329) * 100%);
   text-align: right;
 }
 
-.container.main .report .boss-image img {
+.big-container.main .report .boss-image img {
   height: 6.4rem;
   border: 3px solid white;
   border-radius: 90px;
 }
 
-.container.main .report .boss-text {
+.big-container.main .report .boss-text {
   width: calc( (233 / 329) * 100%);
   padding-left: 2rem;
 }
 
-.container.main .report .boss-text .report-paragraph {
+.big-container.main .report .boss-text .report-paragraph {
   padding-bottom: 0.5rem;
 }
 
@@ -324,14 +324,14 @@ button {
     -ms-grid-column: 4;
     grid-area: self-care;
   }
-  body .main-container .container.main {
+  body .main-container .big-container.main {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     grid-area: report;
     height: 51.8rem;
   }
-  body .main-container .container.main .report {
+  body .main-container .big-container.main .report {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -345,17 +345,17 @@ button {
     height: 35.4rem;
     padding: 3.2rem;
   }
-  body .main-container .container.main .report .boss-image img {
+  body .main-container .big-container.main .report .boss-image img {
     height: 7.8rem;
     margin-bottom: 3rem;
   }
-  body .main-container .container.main .report .boss-text {
+  body .main-container .big-container.main .report .boss-text {
     padding: 0rem;
   }
-  body .main-container .container.main .report .boss-text .report-paragraph {
+  body .main-container .big-container.main .report .boss-text .report-paragraph {
     font-weight: lighter;
   }
-  body .main-container .container.main .buttons {
+  body .main-container .big-container.main .buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

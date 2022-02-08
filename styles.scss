@@ -83,7 +83,7 @@ button {
     // align-items: center;
 }
 
-.container.main {
+.big-container.main {
     height: 20.3rem;
     .report {
         display: flex;
@@ -267,7 +267,7 @@ button {
                     grid-area: self-care;
                 }
             }
-            .container.main {
+            .big-container.main {
                 grid-area: report;
                 height: 51.8rem;
                 .report {

@@ -14,7 +14,7 @@
 <body>
   <main class="main-container">
 
-    <div class="container main">
+    <div class="big-container main">
       <div class="report">
         <div class="boss-image">
           <img src="/images/image-jeremy.png" alt="">
@@ -25,167 +25,169 @@
         </div>
       </div>
       <div class="buttons">
-        <button class="daily" onClick="handleDailyActivities()">Daily</button>
-        <button class="weekly" onClick="handleWeeklyActivities()">Weekly</button>
-        <button class="monthly" onClick="handleMonthlyActivities()">Monthly</button>
+        <!-- <button class="daily" onClick="displayContents('daily')" data-activity-kind="daily">Daily</button>
+        <button class="weekly" onClick="displayContents('weekly')" data-activity-kind="weekly">Weekly</button>
+        <button class="monthly" onClick="displayContents('monthly')" data-activity-kind="monthly">Monthly</button> -->
+        <button class="daily" onClick="displayDailyContents()" data-activity-kind="daily">Daily</button>
+        <button class="weekly" onClick="displayWeeklyContents()" data-activity-kind="weekly">Weekly</button>
+        <button class="monthly" onClick="displayMonthlyContents()" data-activity-kind="monthly">Monthly</button>
       </div>
     </div>
 
     <!-- <div class="container-activities"> -->
-      <div class="container work">
+      <div class="container work" data-id="work">
         <div class="subcontainer-work"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3 class="title"></h3>
-            <h1 class="current-time"></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
-            <p class="previous-time"></p>
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
 
       </div>
   
-      <div class="container play">
+      <div class="container play" data-id="play">
         <div class="subcontainer-play"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3></h3>
-            <h1></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img src="/images/icon-ellipsis.svg" alt="">
-            <p></p> 
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
       </div>
   
-      <div class="container study">
+      <div class="container study" data-id="study">
         <div class="subcontainer-study"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3></h3>
-            <h1></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img src="/images/icon-ellipsis.svg" alt="">
-            <p></p> 
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
-
       </div>
   
-      <div class="container exercise">
+      <div class="container exercise" data-id="exercise">
         <div class="subcontainer-exercise"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3></h3>
-            <h1></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img src="/images/icon-ellipsis.svg" alt="">
-            <p></p> 
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
       </div>
   
-      <div class="container social">
+      <div class="container social" data-id="social">
         <div class="subcontainer-social"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3></h3>
-            <h1></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img src="/images/icon-ellipsis.svg" alt="">
-            <p></p> 
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
       </div>
   
-      <div class="container self-care">
+      <div class="container self-care" data-id="self-care">
         <div class="subcontainer-self-care"></div>
 
         <div class="subcontainer hide-for-desktop">
           <div class="current-period">
-            <h3></h3>
-            <h1></h1>   
+            <h3 class="title" data-element="title"></h3>
+            <h1 class="current-time" data-element="current-time"></h1>   
           </div>
           <div class="previous-period">
             <img src="/images/icon-ellipsis.svg" alt="">
-            <p></p>
+            <p class="previous-time" data-element="previous-time"></p>
           </div>
         </div>
 
         <div class="subcontainer hide-for-mobile">
           <div class="current-period">
-            <h3></h3>
+            <h3 class="title" data-element="title-desktop"></h3>
             <img class="triple-dot" src="/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="previous-period">
-            <h1></h1>
-            <p></p>
+            <h1 class="current-time" data-element="current-time-desktop"></h1>   
+            <p class="previous-time" data-element="previous-time-desktop"></p>
           </div>
         </div>
 
